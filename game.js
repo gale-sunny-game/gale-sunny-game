@@ -5,7 +5,7 @@
 
 const WS_URL = (location.hostname === 'localhost')
   ? 'ws://localhost:8080'
-  : (window.WS_URL_OVERRIDE || 'wss://YOUR_RENDER_SERVICE.onrender.com'); // replace after deployment
+  : (window.WS_URL_OVERRIDE || 'wss://gale-sunny-game.onrender.com'); // replace after deployment
 
 // Canvas
 const canvas = document.getElementById('game');
