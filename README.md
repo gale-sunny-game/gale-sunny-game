@@ -9,7 +9,7 @@ This is a playable 2-phone co-op web game prototype with:
 
 ## Important
 After deploying the WebSocket server, update `game.js`:
-Replace `wss://YOUR_RENDER_SERVICE.onrender.com` with your Render URL, using `wss://`.
+Replace `wss://gale-sunny-game.onrender.com` with your Render URL, using `wss://`.
 
 ## Local test
 - `npm install`
