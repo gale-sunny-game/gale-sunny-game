@@ -1,0 +1,46 @@
+html,body{height:100%;margin:0;background:#0b1020;color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;overflow:hidden}
+#game{position:fixed;inset:0;width:100vw;height:100vh;touch-action:none}
+#ui{position:fixed;inset:0;pointer-events:none}
+.topbar{pointer-events:auto;display:flex;justify-content:space-between;align-items:center;padding:12px 14px}
+.brand{font-weight:900;letter-spacing:.08em}
+.net{display:flex;align-items:center;gap:8px;font-size:12px;opacity:.92}
+.dot{width:10px;height:10px;border-radius:99px;background:#ff4d6d;box-shadow:0 0 0 3px rgba(255,77,109,.18)}
+.dot.on{background:#2be090;box-shadow:0 0 0 3px rgba(43,224,144,.18)}
+
+.panel{pointer-events:auto;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(440px,92vw);
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:18px 16px;
+  backdrop-filter:blur(10px);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+h1{margin:4px 0 8px;font-size:20px}
+.sub{margin:0 0 12px;opacity:.85;font-size:13px;line-height:1.35}
+.row{display:flex;gap:10px;align-items:center;margin:10px 0}
+.row.join input{flex:1}
+input{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px 12px;color:#fff;font-weight:800;letter-spacing:.14em;text-align:center}
+button{border:0;border-radius:12px;padding:12px 14px;font-weight:900;color:#0b1020;background:#fff;cursor:pointer}
+button:disabled{opacity:.55;cursor:not-allowed}
+.primary{background:linear-gradient(135deg,#ff7eb3,#ff3d9e);color:#fff}
+.tiny{padding:8px 10px;border-radius:10px;font-size:12px;background:rgba(255,255,255,.92)}
+.roomline{display:flex;align-items:center;gap:10px;width:100%}
+.label{opacity:.8;font-size:12px}
+.code{font-weight:900;letter-spacing:.22em;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.16);padding:10px 12px;border-radius:12px;flex:1;text-align:center}
+.small{opacity:.92;font-size:12px}
+.chk{display:flex;gap:10px;align-items:center}
+.hint{margin:10px 0 0;opacity:.75;font-size:12px;line-height:1.35}
+
+.hud{pointer-events:none;position:absolute;left:0;right:0;top:52px;padding:10px 12px}
+.hudline{display:flex;justify-content:space-between;gap:10px;margin-bottom:8px}
+.pill{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:8px 12px;font-weight:900;font-size:12px;backdrop-filter:blur(8px)}
+
+#touch{position:fixed;inset:0;display:flex;justify-content:space-between;align-items:flex-end;padding:16px;pointer-events:none}
+.joy{width:160px;height:160px;position:relative;pointer-events:auto;touch-action:none}
+.joyBase{position:absolute;inset:0;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18)}
+.joyKnob{position:absolute;left:50%;top:50%;width:70px;height:70px;border-radius:999px;transform:translate(-50%,-50%);
+  background:rgba(255,255,255,.20);border:1px solid rgba(255,255,255,.22);box-shadow:0 10px 22px rgba(0,0,0,.25)}
+.btns{display:flex;gap:10px;pointer-events:auto}
+.action{width:120px;height:56px;border-radius:18px;background:rgba(255,255,255,.92);font-weight:1000}
+.action.secondary{background:rgba(255,255,255,.78)}
+.action.tertiary{background:rgba(255,255,255,.64)}
+@media (min-width:900px){
+  #touch{padding:24px}
+  .joy{width:190px;height:190px}
+  .action{width:140px}
+}

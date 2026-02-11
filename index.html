@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Gale & Sunny, Co-op Quest</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="ui">
+    <div class="topbar">
+      <div class="brand">Gale & Sunny</div>
+      <div class="net">
+        <span id="statusDot" class="dot"></span>
+        <span id="statusText">offline</span>
+      </div>
+    </div>
+
+    <div class="panel" id="menuPanel">
+      <h1>Co-op Room</h1>
+      <p class="sub">Open on both phones. One creates a room, the other joins. Then press Start.</p>
+
+      <div class="row">
+        <button id="createBtn" class="primary">Create room</button>
+      </div>
+
+      <div class="row join">
+        <input id="roomInput" inputmode="numeric" autocomplete="one-time-code" placeholder="Room code" maxlength="6" />
+        <button id="joinBtn">Join</button>
+      </div>
+
+      <div class="row">
+        <div class="roomline">
+          <span class="label">Room</span>
+          <span id="roomCode" class="code">------</span>
+          <button id="copyBtn" class="tiny">Copy</button>
+        </div>
+      </div>
+
+      <div class="row small">
+        <label class="chk"><input id="isHostChk" type="checkbox" /> I am host (controls Gale)</label>
+      </div>
+
+      <div class="row">
+        <button id="startBtn" class="primary" disabled>Start game</button>
+      </div>
+
+      <p class="hint">
+        Free server tip: the first connection can take a moment if the server was sleeping.
+      </p>
+    </div>
+
+    <div class="hud" id="hud" style="display:none;">
+      <div class="hudline">
+        <div class="pill" id="phasePill">Level 1</div>
+        <div class="pill" id="objectivePill">Objective: reach the exit together</div>
+      </div>
+      <div class="hudline">
+        <div class="pill">💖 <span id="hearts">0</span></div>
+        <div class="pill">Relic: <span id="relic">none</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="touch" aria-label="Touch controls">
+    <div id="joy" class="joy">
+      <div class="joyBase"></div>
+      <div class="joyKnob" id="joyKnob"></div>
+    </div>
+
+    <div class="btns">
+      <button id="ab1Btn" class="action">Ability 1</button>
+      <button id="ab2Btn" class="action secondary">Ability 2</button>
+      <button id="intBtn" class="action tertiary">Interact</button>
+    </div>
+  </div>
+
+  <script src="levels.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
